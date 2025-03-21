@@ -1,77 +1,168 @@
+/* Modern Variables */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #2c3e50;
+  --light-bg: #f8f9fa;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* General Styling */
 .cv-container {
-    max-width: 800px; /* Sets the max width for layout */
-    margin: auto; /* Centers the container */
-    font-family: Arial, sans-serif; /* Sets a clean font style */
-  }
-  
-  /* Contact and Objective Section Styling */
-  .contact-section, .objective-section {
-    text-align: center; /* Centers text content */
-    margin-bottom: 20px; /* Adds space below sections */
-  }
-  
-  /* Dropdown Section Styling */
-  .dropdown-section {
-    border-bottom: 1px solid #ccc; /* Adds a separator line */
-    padding: 10px 0; /* Provides spacing */
-  }
-  
-  /* Dropdown Header Styling */
-  .dropdown {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer; /* Makes the dropdown clickable */
-    padding: 10px;
-    background-color: #f4f4f4; /* Light gray background */
-    border-radius: 5px; /* Rounds the corners */
-  }
-  
-  .dropdown:hover {
-    background-color: #e0e0e0; /* Darker background on hover */
-  }
-  
-  /* Hidden List Styling */
-  ul {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0;
-    margin: 0;
-    display: none; /* Hides lists initially */
-  }
-  
-  /* Open List Styling */
-  ul.open {
-    display: block; /* Displays list when dropdown is active */
-    padding: 10px;
-    background: #fafafa; /* Light background for visibility */
-    border-radius: 5px; /* Rounds corners */
-  }
-  
-  /* List Item Styling */
-  li {
-    padding: 5px 0; /* Adds spacing between items */
-  }
-  
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: white;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+}
 
-  /* Return Button Styling */
+/* Contact Card */
+.contact-card {
+  background: linear-gradient(135deg, #3f51b5, #2196f3);
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-card h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.contact-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.contact-info mat-icon {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+/* Objective Card */
+.objective-card {
+  margin-bottom: 2rem;
+}
+
+.objective-card h3 {
+  color: #3f51b5;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.objective-card mat-icon {
+  color: #3f51b5;
+}
+
+/* Skills Container */
+.skills-container {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* Expansion Panels */
+mat-expansion-panel {
+  margin-bottom: 0.5rem;
+  border-radius: var(--border-radius) !important;
+}
+
+mat-expansion-panel-header {
+  background-color: #f5f5f5;
+  border-radius: var(--border-radius) !important;
+}
+
+mat-expansion-panel-header:hover {
+  background-color: #eeeeee;
+}
+
+mat-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3f51b5;
+  font-weight: 500;
+}
+
+mat-panel-title mat-icon {
+  color: #3f51b5;
+}
+
+mat-panel-description {
+  padding: 1rem 0;
+}
+
+mat-panel-description ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+mat-panel-description li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+mat-panel-description li:last-child {
+  border-bottom: none;
+}
+
+/* Return Button Section */
 .return-section {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 25px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.return-section button {
+  padding: 0.8rem 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cv-container {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
   }
-  
-  .return-button {
-    background-color: #4285f4;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+
+  .contact-card h1 {
+    font-size: 1.8rem;
   }
-  
-  .return-button:hover {
-    background-color: #3367d6;
+
+  .contact-card h2 {
+    font-size: 1.1rem;
   }
+
+  .objective-card h3 {
+    font-size: 1.1rem;
+  }
+}

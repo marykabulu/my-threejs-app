@@ -1,57 +1,89 @@
+<!-- Main Container -->
 <div class="cv-container">
-    <!-- Contact & Objective Section (unchanged) -->
-    <section class="contact-section">
+  <!-- Contact Section -->
+  <mat-card class="contact-card">
+    <mat-card-content>
       <h1>MARY KABULU</h1>
       <h2>Junior Developer</h2>
-      <p>📧 mkabulu1&#64;gmail.com</p>
-      <p>📞 +27 789747016</p>
-      <p>📍 43 Sivewright Avenue, New Doornfontein, Johannesburg, 2094</p>
-    </section>
-  
-    <section class="objective-section">
-      <h3>Objective</h3>
+      <div class="contact-info">
+        <p><mat-icon>email</mat-icon> mkabulu1&#64;gmail.com</p>
+        <p><mat-icon>phone</mat-icon> +27 789747016</p>
+        <p><mat-icon>location_on</mat-icon> 43 Sivewright Avenue, New Doornfontein, Johannesburg, 2094</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Objective Section -->
+  <mat-card class="objective-card">
+    <mat-card-content>
+      <h3><mat-icon>target</mat-icon> Objective</h3>
       <p>Enthusiastic and dedicated individual pursuing a Bachelor of Science degree in Computing...</p>
-    </section>
-  
-    <!-- Dropdown Sections (modified) -->
-    <div class="dropdown-section">
-      <div class="dropdown" (click)="toggleSection('technologies')">
-        <h3>🛠 Technologies</h3>
-      </div>
-      <ul [class.open]="sections.technologies">
-        <li *ngFor="let tech of technologies">{{ tech }}</li>
-      </ul>
-    </div>
-  
-    <div class="dropdown-section">
-      <div class="dropdown" (click)="toggleSection('tools')">
-        <h3>🔧 Tools</h3>
-      </div>
-      <ul [class.open]="sections.tools">
-        <li *ngFor="let tool of tools">{{ tool }}</li>
-      </ul>
-    </div>
-  
-    <div class="dropdown-section">
-      <div class="dropdown" (click)="toggleSection('education')">
-        <h3>🎓 Education</h3>
-      </div>
-      <ul [class.open]="sections.education">
-        <li *ngFor="let edu of education">{{ edu }}</li>
-      </ul>
-    </div>
-  
-    <div class="dropdown-section">
-      <div class="dropdown" (click)="toggleSection('references')">
-        <h3>📜 References</h3>
-      </div>
-      <ul [class.open]="sections.references">
-        <li>Available upon request</li>
-      </ul>
-    </div>
+    </mat-card-content>
+  </mat-card>
 
-    <div class="return-section">
-        <button class="return-button" (click)="returnToStartPage()">Return to Start Page</button>
-      </div>
+  <!-- Skills and Experience Sections -->
+  <mat-accordion class="skills-container" multi="false">
+    <!-- Technologies Section -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>code</mat-icon> Technologies
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <ul>
+          <li *ngFor="let tech of technologies">{{ tech }}</li>
+        </ul>
+      </mat-panel-description>
+    </mat-expansion-panel>
 
+    <!-- Tools Section -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>build</mat-icon> Tools
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <ul>
+          <li *ngFor="let tool of tools">{{ tool }}</li>
+        </ul>
+      </mat-panel-description>
+    </mat-expansion-panel>
+
+    <!-- Education Section -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>school</mat-icon> Education
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <ul>
+          <li *ngFor="let edu of education">{{ edu }}</li>
+        </ul>
+      </mat-panel-description>
+    </mat-expansion-panel>
+
+    <!-- References Section -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>person_check</mat-icon> References
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <ul>
+          <li>Available upon request</li>
+        </ul>
+      </mat-panel-description>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <!-- Return Button Section -->
+  <div class="return-section">
+    <button mat-raised-button color="primary" (click)="returnToStartPage()">
+      <mat-icon>arrow_back</mat-icon> Return to Start Page
+    </button>
   </div>
+</div>
