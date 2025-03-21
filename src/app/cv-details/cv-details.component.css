@@ -1,0 +1,77 @@
+/* General Styling */
+.cv-container {
+    max-width: 800px; /* Sets the max width for layout */
+    margin: auto; /* Centers the container */
+    font-family: Arial, sans-serif; /* Sets a clean font style */
+  }
+  
+  /* Contact and Objective Section Styling */
+  .contact-section, .objective-section {
+    text-align: center; /* Centers text content */
+    margin-bottom: 20px; /* Adds space below sections */
+  }
+  
+  /* Dropdown Section Styling */
+  .dropdown-section {
+    border-bottom: 1px solid #ccc; /* Adds a separator line */
+    padding: 10px 0; /* Provides spacing */
+  }
+  
+  /* Dropdown Header Styling */
+  .dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer; /* Makes the dropdown clickable */
+    padding: 10px;
+    background-color: #f4f4f4; /* Light gray background */
+    border-radius: 5px; /* Rounds the corners */
+  }
+  
+  .dropdown:hover {
+    background-color: #e0e0e0; /* Darker background on hover */
+  }
+  
+  /* Hidden List Styling */
+  ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: none; /* Hides lists initially */
+  }
+  
+  /* Open List Styling */
+  ul.open {
+    display: block; /* Displays list when dropdown is active */
+    padding: 10px;
+    background: #fafafa; /* Light background for visibility */
+    border-radius: 5px; /* Rounds corners */
+  }
+  
+  /* List Item Styling */
+  li {
+    padding: 5px 0; /* Adds spacing between items */
+  }
+  
+
+  /* Return Button Styling */
+.return-section {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .return-button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .return-button:hover {
+    background-color: #3367d6;
+  }

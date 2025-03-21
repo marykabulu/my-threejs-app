@@ -1,0 +1,57 @@
+<div class="cv-container">
+    <!-- Contact & Objective Section (unchanged) -->
+    <section class="contact-section">
+      <h1>MARY KABULU</h1>
+      <h2>Junior Developer</h2>
+      <p>📧 mkabulu1&#64;gmail.com</p>
+      <p>📞 +27 789747016</p>
+      <p>📍 43 Sivewright Avenue, New Doornfontein, Johannesburg, 2094</p>
+    </section>
+  
+    <section class="objective-section">
+      <h3>Objective</h3>
+      <p>Enthusiastic and dedicated individual pursuing a Bachelor of Science degree in Computing...</p>
+    </section>
+  
+    <!-- Dropdown Sections (modified) -->
+    <div class="dropdown-section">
+      <div class="dropdown" (click)="toggleSection('technologies')">
+        <h3>🛠 Technologies</h3>
+      </div>
+      <ul [class.open]="sections.technologies">
+        <li *ngFor="let tech of technologies">{{ tech }}</li>
+      </ul>
+    </div>
+  
+    <div class="dropdown-section">
+      <div class="dropdown" (click)="toggleSection('tools')">
+        <h3>🔧 Tools</h3>
+      </div>
+      <ul [class.open]="sections.tools">
+        <li *ngFor="let tool of tools">{{ tool }}</li>
+      </ul>
+    </div>
+  
+    <div class="dropdown-section">
+      <div class="dropdown" (click)="toggleSection('education')">
+        <h3>🎓 Education</h3>
+      </div>
+      <ul [class.open]="sections.education">
+        <li *ngFor="let edu of education">{{ edu }}</li>
+      </ul>
+    </div>
+  
+    <div class="dropdown-section">
+      <div class="dropdown" (click)="toggleSection('references')">
+        <h3>📜 References</h3>
+      </div>
+      <ul [class.open]="sections.references">
+        <li>Available upon request</li>
+      </ul>
+    </div>
+
+    <div class="return-section">
+        <button class="return-button" (click)="returnToStartPage()">Return to Start Page</button>
+      </div>
+
+  </div>
