@@ -1,13 +1,25 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-cv-details',
   templateUrl: './cv-details.component.html',
   styleUrls: ['./cv-details.component.css'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule
+  ]
 })
 
 export class CvDetailsComponent {
